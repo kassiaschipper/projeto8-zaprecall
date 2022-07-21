@@ -1,70 +1,59 @@
+import Header from "./Header";
+import Footer from "./Footer";
+import FlashCard from "./Flashcard";
+
 export default function FlashCards() {
-  let closedFlashCards = [
-    { question: "Pergunta 1" },
-    { question: "Pergunta 2" },
-    { question: "Pergunta 3" },
-    { question: "Pergunta 4" },
+  
+  const flahscardsDeck = [
+    {question: "O que é JSX?", answer:"Uma extensão de linguagem do JavaScript"},
+    {question:"O React é __ ", answer:"Uma biblioteca JavaScript para construção de interfaces"},
+    {question: "Componentes devem iniciar com __ ", answer:"Letra maiúscula"},
+    {question: "Podemos colocar __ dentro do JSX", answer:"Expressões"},
+    {question:"O ReactDOM nos ajuda __ ", answer:"Interagindo com a DOM para colocar componentes React na mesma"},
+    {question:"Usamos o npm para __ ", answer:"Gerenciar os pacotes necessários e suas dependências"},
+    {question:" Usamos props para __ ", answer:"Passar diferentes informações para componentes"},
+    {question:"Usamos estado (state) para __ ", answer:"Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
   ];
 
+  function shuffleFlahscardsDeck(cards){
+    for (let index = cards.length -1; index > 0; index--){
+      /*Escolhendo elemento aleatório*/
+      const j = Math.floor(Math.random() * (index+1));
+      /*Reposicionado elemento*/
+      [cards[index], cards[j]] = [cards[j], cards[index]]
+    }
+  }
+
+  shuffleFlahscardsDeck(flahscardsDeck);
+
+  // let closedFlashCards = [
+  //   { question: "Pergunta 1" },
+  //   { question: "Pergunta 2" },
+  //   { question: "Pergunta 3" },
+  //   { question: "Pergunta 4" },
+  // ];
+  
+ 
   return (
     
     <div className="container-flashCards">
-        <div className="header">
-            <img className="logo-header" src="assets/imagens/logo.png" />
-            <h1 className="title-header">ZapRecall</h1>
-        </div>
-        {closedFlashCards.map(value => (
+        <Header />
+            
             <div className="questions">
-            <ul>
-                <li className="question">
-                    {value.question}
-                    <ion-icon name="play-outline"></ion-icon>
-                </li>
-            </ul>            
+            <ul> 
+              {flahscardsDeck.map((value, index) => (
+                <FlashCard />
+              ))}
+           </ul>            
         </div>
-        ))}
-        <div className="footer">
+        
 
-        </div>
+        <Footer />
     </div>
   );
 }
 
-// closedFlashCards.map((value) => {
-//   <>
-//     <div className="title">Seu titulo aquiA</div>
-//     <img src="assets/imagens/logo.png" />
-//     <div className="questions">
-//       <div>{value.question}teste</div>
-//     </div>
-//   </>;
-// });
-
-
-// export default function Story() {
-
-//     const storie = [
-//         { urlImg: "assets/img/9gag.svg", pagina: "9gag" },
-//         { urlImg: "assets/img/meowed.svg", pagina: "meowed" },
-//         { urlImg: "assets/img/barked.svg", pagina: "barked" },
-//         { urlImg: "assets/img/nathanwpylestrangeplanet.svg", pagina: "nathanwpylestrangeplanet" },
-//         { urlImg: "assets/img/wawawicomics.svg", pagina: "wawawicomics" },
-//         { urlImg: "assets/img/respondeai.svg", pagina: "respondeai" },
-//         { urlImg: "assets/img/filomoderna.svg", pagina: "filomoderna" },
-//         { urlImg: "assets/img/memeriagourmet.svg", pagina: "memeriagourmet" }
-//     ];
-
-//     return (
-//         <>
-//             {storie.map(value => (
-//                 <div class="story">
-//                     <div class="imagem">
-//                         <img src={value.urlImg} />
-//                     </div>
-//                     <div class="usuario">
-//                         {value.pagina}
-//                     </div>
-//                 </div>))
-//             }</>);
-// }
-
+/*/{flahscardsDeck.map((value, index) => (<li key={index} className="question">
+{value.question}
+<ion-icon name="play-outline" onClick={() => alert("teste")}></ion-icon>
+</li>))}*/ 
