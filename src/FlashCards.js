@@ -1,10 +1,10 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import QuestionNamber from "./QuestionNumber";
 import FlashCard from "./Flashcard";
 
 export default function FlashCards() {
-  
-  const flahscardsDeck = [
+  const flashCardsDeck = [
     {question: "O que é JSX?", answer:"Uma extensão de linguagem do JavaScript"},
     {question:"O React é __ ", answer:"Uma biblioteca JavaScript para construção de interfaces"},
     {question: "Componentes devem iniciar com __ ", answer:"Letra maiúscula"},
@@ -24,36 +24,32 @@ export default function FlashCards() {
     }
   }
 
-  shuffleFlahscardsDeck(flahscardsDeck);
+  shuffleFlahscardsDeck(flashCardsDeck);
 
-  // let closedFlashCards = [
-  //   { question: "Pergunta 1" },
-  //   { question: "Pergunta 2" },
-  //   { question: "Pergunta 3" },
-  //   { question: "Pergunta 4" },
-  // ];
+  const newFlashCardsDeck = [...flashCardsDeck];
+  //função pra deixar o deck com somente 4 cartas, sem influenciar o arrey principal 
+  function reduceaArray(array){
+    for (let i = 0; i < 4; i++){
+      array.pop()
+    }
+  }
+
+  reduceaArray(newFlashCardsDeck);
   
- 
-  return (
-    
-    <div className="container-flashCards">
-        <Header />
-            
-            <div className="questions">
-            <ul> 
-              {flahscardsDeck.map((value, index) => (
-                <FlashCard />
-              ))}
-           </ul>            
-        </div>
-        
 
-        <Footer />
+  return (
+    <div className="container-flashCards">
+       <Header />
+       <div className="questions">
+          <ul>
+            {newFlashCardsDeck.map((value, index) => (
+              <QuestionNamber key={index} index={index+1}/>
+            ))}
+            
+          </ul> 
+       </div>
+       <Footer />  
     </div>
   );
 }
 
-/*/{flahscardsDeck.map((value, index) => (<li key={index} className="question">
-{value.question}
-<ion-icon name="play-outline" onClick={() => alert("teste")}></ion-icon>
-</li>))}*/ 
