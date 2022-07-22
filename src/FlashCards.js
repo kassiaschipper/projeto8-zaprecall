@@ -1,9 +1,10 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import QuestionNamber from "./QuestionNumber";
 import FlashCard from "./Flashcard";
 
 export default function FlashCards() {
+   
+  
   const flashCardsDeck = [
     {question: "O que é JSX?", answer:"Uma extensão de linguagem do JavaScript"},
     {question:"O React é __ ", answer:"Uma biblioteca JavaScript para construção de interfaces"},
@@ -43,7 +44,7 @@ export default function FlashCards() {
        <div className="questions">
           <ul>
             {newFlashCardsDeck.map((value, index) => (
-              <QuestionNamber key={index} index={index+1}/>
+              <FlashCard key={index} index={index} {...value} />
             ))}
             
           </ul> 
@@ -52,4 +53,6 @@ export default function FlashCards() {
     </div>
   );
 }
+
+// key={index}  
 
