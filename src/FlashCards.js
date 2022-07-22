@@ -54,5 +54,5 @@ export default function FlashCards() {
   );
 }
 
-// key={index}  
+
 

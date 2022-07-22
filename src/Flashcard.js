@@ -5,10 +5,11 @@ import Answer from "./Answer";
 import Answered from "./Answered";
 
 
-export default function FlashCard ({index, question}){
+export default function FlashCard ({index, question, answer}){
     
     const [flahscardState, SetFlahscardState] = React.useState("questionNamber")
-    const [answer, setAnswer] = React.useState("")
+    // const [answer, setAnswer] = React.useState("")
+    // const [imgAnswer, setImgAnswer] = React.useState("")
     
     if(flahscardState === "questionNamber"){
         return(
@@ -18,12 +19,12 @@ export default function FlashCard ({index, question}){
          return(
              <Question  question={question} SetFlahscardState={setInterval}/>
          );
-    }
-    // }else if (flahscardState === "answered") {
-    //     return(
-    //         <Answered  />
-    //     );
-    // } 
+     }else if (flahscardState === "answer") {
+         return(
+            <QuestionNamber index={index} SetFlahscardState={SetFlahscardState} />
+             
+          );
+    } 
     // else{
     //     return(
     //         <QuestionNamber index={index} SetFlahscardState={SetFlahscardState} />
