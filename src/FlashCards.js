@@ -13,8 +13,10 @@ export default function FlashCards() {
     {question:"O ReactDOM nos ajuda __ ", answer:"Interagindo com a DOM para colocar componentes React na mesma"},
     {question:"Usamos o npm para __ ", answer:"Gerenciar os pacotes necessários e suas dependências"},
     {question:" Usamos props para __ ", answer:"Passar diferentes informações para componentes"},
-    {question:"Usamos estado (state) para __ ", answer:"Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
+    {question:"Usamos estado (state) para __ ", answer:"Dizer para o React quais infor- mações quando atualizadas devem re-renderizar a tela"}
   ];
+  
+  const [images, setImages] = React.useState([]);
 
   function shuffleFlahscardsDeck(cards){
     for (let index = cards.length -1; index > 0; index--){
@@ -28,7 +30,7 @@ export default function FlashCards() {
   shuffleFlahscardsDeck(flashCardsDeck);
 
   const newFlashCardsDeck = [...flashCardsDeck];
-  //função pra deixar o deck com somente 4 cartas, sem influenciar o arrey principal 
+  //função pra deixar o deck com somente 4 cartas, sem influenciar o array principal 
   function reduceaArray(array){
     for (let i = 0; i < 4; i++){
       array.pop()
@@ -44,7 +46,7 @@ export default function FlashCards() {
        <div className="questions">
           <ul>
             {newFlashCardsDeck.map((value, index) => (
-              <FlashCard key={index} index={index} {...value} />
+              <FlashCard key={index} index={index} {...value} images={images} setImages={setImages}/>
             ))}
             
           </ul> 

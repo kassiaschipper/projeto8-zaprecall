@@ -1,4 +1,4 @@
-export default function WellcomeScreen({changeScreen, setChangeScreen}){
+export default function WelcomeScreen({changeScreen, setChangeScreen}){
     
     
         

@@ -1,30 +1,30 @@
 import React from "react";
 
-export default function Answer() {
-//  function options() {
-//      SetFlahscardState("answered");
-//      alert("mostra resposta");
-//    }
-   
-//  function answerState(){
-//     setAnswer(zapStatus);
-//     setImgAnswers([...icons, iconName]);
-//     setImgAnswer(iconName);
-// }
-  
+export default function Answer({ setFlashCardState, answer, setAnswer,images,setImages, setAnswerImg}) {
+  function options() {
+    setFlashCardState("answered");
+  }
+  function stateAnswer(recallStatus){
+    setAnswer(recallStatus);    
+  }
+  function answerImg(){
+    setAnswerImg([...images, correspondingImage
+    ]);
+    setImages([correspondingImage]);
+  }
+
 
   return (
-    <>teste</>
-  );
-  } 
-// {answer, setAnswer, setImgAnswers, setImgAnswer}
-{/* <li className="answer">
-      <div className="question-value">
-        <span>teste</span>
+    <li className="answer">
+      <div className="answer-value">
+        <span className="text">{answer}</span>
       </div>
       <div className="options">
-        <div onClick={options}>Não lembrei</div>
-        <div onClick={options}>Quase não lembrei</div>
-        <div onClick={options}>Zap!</div>
+        <div className="wrong" onClick={() => {options(); stateAnswer("wrong"); answerImg("wrong-image")}} >Não lembrei</div>
+        <div className="notYet" onClick={() => {options(); stateAnswer("notYet"); answerImg("notYet-image")}}>Quase não lembrei</div>
+        <div className="right" onClick={() => {options(); stateAnswer("right"); answerImg("right-image")}}>Zap!</div>
       </div>
-    </li> */}
+    </li>
+  );
+}
+

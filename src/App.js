@@ -1,5 +1,5 @@
 
-import WellcomeScreen from "./WellcomeScreen";
+import WelcomeScreen from "./WelcomeScreen";
 import FlashCards from "./FlashCards";
 import React from "react";
 
@@ -11,7 +11,7 @@ export default function App(){
     return(
     <>
      
-     {changeScreen ? <WellcomeScreen changeScreen={changeScreen} setChangeScreen={setChangeScreen}/> : <FlashCards />} 
+     {changeScreen ? <WelcomeScreen changeScreen={changeScreen} setChangeScreen={setChangeScreen}/> : <FlashCards />} 
       
     </>
     

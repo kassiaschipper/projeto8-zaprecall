@@ -1,6 +1,6 @@
-export default function Question({ question, SetFlahscardState }) {
+export default function Question({ question, setFlashCardState }) {
   function showAnswer() {
-    SetFlahscardState("answer")
+    setFlashCardState("answer")
     }
   return (
     <li className="question">

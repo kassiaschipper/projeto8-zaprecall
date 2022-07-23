@@ -156,7 +156,6 @@
     border-radius: 5px;
     border-radius: 5px;
     position: relative;
-    
   }
 
   .question-value {
@@ -175,5 +174,101 @@
     position: absolute;
     bottom: 6px;
     right: 15px;
+  }
+
+  /*Estilo Answer*/
+  .answer {
+    width: 299px;
+    height: 110px;
+    margin-bottom: 10px;
+
+    background-color: #ffffd5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .answer-value {
+    width: 100%;
+    height: 50px;
+
+    padding-top: 5px;
+    padding-left: 15px;
+   
+  }
+
+  .text {
+    font-family: "Recursive";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    
+    color: #333333;
+  }
+  .options {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .wrong {
+    width: 85px;
+    height: 37px;
+
+    background: #ff3030;
+    border-radius: 5px;
+
+    font-family: "Recursive";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+  }
+  .notYet {
+    width: 85px;
+    height: 37px;
+
+    background: #ff922e;
+    border-radius: 5px;
+
+    font-family: "Recursive";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .right {
+    width: 85px;
+    height: 37px;
+
+    background: #2fbe34;
+    border-radius: 5px;
+    font-family: "Recursive";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 25px;
+
+    color: #ffffff;
+    display: flex;
+    align-items: center;
   }
 }

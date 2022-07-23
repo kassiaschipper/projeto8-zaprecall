@@ -1,9 +1,8 @@
 
-export default function QuestionNamber({index, SetFlahscardState}) {
+export default function QuestionNamber({index, setFlashCardState}) {
     function showQuestion(){
-        SetFlahscardState("question")
-        alert("mostra pergunta")
-    }
+        setFlashCardState("question")
+     }
     
     return(                
          <li>

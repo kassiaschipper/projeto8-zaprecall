@@ -1,33 +1,34 @@
 import React from "react";
-import QuestionNamber from "./QuestionNumber";
+import QuestionNumber from "./QuestionNumber";
 import Question from "./Question";
 import Answer from "./Answer";
 import Answered from "./Answered";
 
 
-export default function FlashCard ({index, question, answer}){
+export default function FlashCard ({index, question, answer, images, setImages}){
     
-    const [flahscardState, SetFlahscardState] = React.useState("questionNamber")
-    // const [answer, setAnswer] = React.useState("")
-    // const [imgAnswer, setImgAnswer] = React.useState("")
+    const [flashCardState, setFlashCardState] = React.useState("questionNumber")
+    const [answer, setAnswer] = React.useState("")
+    const [answerImg, setAnswerImg] = React.useState("")
+
     
-    if(flahscardState === "questionNamber"){
+    
+    if(flashCardState === "questionNumber"){
         return(
-            <QuestionNamber index={index} SetFlahscardState={SetFlahscardState} />
+            <QuestionNumber index={index} setFlashCardState={setFlashCardState} />
         );
-    } else if(flahscardState === "question"){
+    }else if(flashCardState === "question"){
          return(
-             <Question  question={question} SetFlahscardState={setInterval}/>
+             <Question  question={question} setFlashCardState={setFlashCardState}/>
          );
-     }else if (flahscardState === "answer") {
+     }else if (flashCardState === "answer") {
          return(
-            <QuestionNamber index={index} SetFlahscardState={SetFlahscardState} />
-             
+            <Answer  answer={answer} setAnswer={setAnswer} setAnswerImg={setAnswerImg} setFlashCardState={setFlashCardState} images={images} setImages={setImages}/>           
           );
     } 
     // else{
     //     return(
-    //         <QuestionNamber index={index} SetFlahscardState={SetFlahscardState} />
+    //         <QuestionNumber index={index} setFlashCardState={setFlashCardState} />
     //     );
     // }
     
