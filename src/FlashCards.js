@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import FlashCard from "./Flashcard";
@@ -46,7 +47,7 @@ export default function FlashCards() {
        <div className="questions">
           <ul>
             {newFlashCardsDeck.map((value, index) => (
-              <FlashCard key={index} index={index} {...value} images={images} setImages={setImages}/>
+              <FlashCard key={index} index={index} {...value} images={images}/>
             ))}
             
           </ul> 
@@ -58,3 +59,4 @@ export default function FlashCards() {
 
 
 
+// images={images} setImages={setImages}

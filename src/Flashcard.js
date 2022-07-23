@@ -8,7 +8,7 @@ import Answered from "./Answered";
 export default function FlashCard ({index, question, answer, images, setImages}){
     
     const [flashCardState, setFlashCardState] = React.useState("questionNumber")
-    const [answer, setAnswer] = React.useState("")
+    const [answered, setAnswered] = React.useState("")
     const [answerImg, setAnswerImg] = React.useState("")
 
     
@@ -23,8 +23,8 @@ export default function FlashCard ({index, question, answer, images, setImages})
          );
      }else if (flashCardState === "answer") {
          return(
-            <Answer  answer={answer} setAnswer={setAnswer} setAnswerImg={setAnswerImg} setFlashCardState={setFlashCardState} images={images} setImages={setImages}/>           
-          );
+            <Answer  answer={answer} setAnswered={setAnswered} setAnswerImg={setAnswerImg} setFlashCardState={setFlashCardState} images={images} setImages={setImages}/>
+            );
     } 
     // else{
     //     return(

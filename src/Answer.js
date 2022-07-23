@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Answer({ setFlashCardState, answer, setAnswer,images,setImages, setAnswerImg}) {
+export default function Answer({ setFlashCardState, answer, setAnswered,images,setImages, setAnswerImg}) {
   function options() {
     setFlashCardState("answered");
   }
   function stateAnswer(recallStatus){
-    setAnswer(recallStatus);    
+    setAnswered(recallStatus);    
   }
   function answerImg(){
     setAnswerImg([...images, correspondingImage

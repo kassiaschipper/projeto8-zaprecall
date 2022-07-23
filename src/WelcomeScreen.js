@@ -1,7 +1,5 @@
 export default function WelcomeScreen({changeScreen, setChangeScreen}){
-    
-    
-        
+              
     return (
         <div className="container-wellcome-screen">
             <img className="logo" src="assets/imagens/logo.png"/>
