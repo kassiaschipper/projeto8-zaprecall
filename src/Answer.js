@@ -17,14 +17,3 @@ export default function Answer() {
     <>teste</>
   );
   } 
-// {answer, setAnswer, setImgAnswers, setImgAnswer}
-{/* <li className="answer">
-      <div className="question-value">
-        <span>teste</span>
-      </div>
-      <div className="options">
-        <div onClick={options}>Não lembrei</div>
-        <div onClick={options}>Quase não lembrei</div>
-        <div onClick={options}>Zap!</div>
-      </div>
-    </li> */}
