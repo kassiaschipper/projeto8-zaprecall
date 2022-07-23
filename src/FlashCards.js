@@ -58,5 +58,3 @@ export default function FlashCards() {
 }
 
 
-
-// images={images} setImages={setImages}
