@@ -6,7 +6,7 @@ export default function QuestionNamber({index, setFlashCardState}) {
     
     return(                
          <li>
-            <span className="questionNumber">Pergunta {index+1} 
+            <span className="questionNumber">Pergunta {index} 
             <ion-icon name="play-outline" onClick={showQuestion}></ion-icon></span>            
          </li>
         

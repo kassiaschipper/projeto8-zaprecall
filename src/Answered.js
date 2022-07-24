@@ -1,3 +1,10 @@
-export default function Answered(){
-    
+export default function Answered({answerImg, index}){
+        const answerIcon = answerImg+ "-circle-outline"; //constante para mudar o icone dependendo da resposta
+           
+    return (
+        <li>
+            <span className= {`questionNumber icone-${answerImg}`}>Pergunta {index}
+            <ion-icon name={answerIcon}></ion-icon></span>
+        </li>
+    )
 }

@@ -47,7 +47,7 @@ export default function FlashCards() {
        <div className="questions">
           <ul>
             {newFlashCardsDeck.map((value, index) => (
-              <FlashCard key={index} index={index} {...value} images={images}/>
+              <FlashCard key={index} index={index+1} {...value} images={images} setImages={setImages}/>
             ))}
             
           </ul> 

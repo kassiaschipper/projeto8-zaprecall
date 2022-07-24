@@ -7,9 +7,9 @@ import Answered from "./Answered";
 
 export default function FlashCard ({index, question, answer, images, setImages}){
     
-    const [flashCardState, setFlashCardState] = React.useState("questionNumber")
-    const [answered, setAnswered] = React.useState("")
-    const [answerImg, setAnswerImg] = React.useState("")
+    const [flashCardState, setFlashCardState] = React.useState("questionNumber")// controle de estado inicial dos cards iniciando na primeira tela
+    const [answered, setAnswered] = React.useState("") //controle de estado para as 3 opçoes de resposta (não lembrei, quase não lemrei e zap!)
+    const [answerImg, setAnswerImg] = React.useState("") //controle de estado das imagens após resposta
 
     
     
@@ -25,12 +25,11 @@ export default function FlashCard ({index, question, answer, images, setImages})
          return(
             <Answer  answer={answer} setAnswered={setAnswered} setAnswerImg={setAnswerImg} setFlashCardState={setFlashCardState} images={images} setImages={setImages}/>
             );
-    } 
-    // else{
-    //     return(
-    //         <QuestionNumber index={index} setFlashCardState={setFlashCardState} />
-    //     );
-    // }
+    }else if (flashCardState === "answered"){
+        return(
+             <Answered index={index} answerImg={answerImg} answered={answered}/>
+         );
+    }
     
    
 }
