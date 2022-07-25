@@ -1,3 +1,6 @@
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
+
 export default function Answered({answerImg, index}){
         const answerIcon = answerImg+ "-circle"; //constante para mudar o icone dependendo da resposta
            

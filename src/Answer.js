@@ -1,4 +1,7 @@
 import React from "react";
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
+
 
 export default function Answer({ setFlashCardState, answer, setAnswered,images,setImages, setAnswerImg}) {
   function options() { //função para alterar o estado dos cards

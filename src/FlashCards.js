@@ -2,6 +2,9 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import FlashCard from "./Flashcard";
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
+
 
 export default function FlashCards(message) {
    

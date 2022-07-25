@@ -1,4 +1,8 @@
 import React from "react";
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
+import party from "./assets/images/party.png";
+import sad from "./assets/images/sad.png";
 
 export default function Footer({ images }) {
   let maxLengthImages = images.length;
@@ -10,7 +14,7 @@ export default function Footer({ images }) {
         return (
           <div className="final-message">
             <div className="reaction sad">
-              <img src="assets/imagens/sad.png" />
+              <img src={sad} />
               Putz...
             </div>
             <span className="text-reaction">
@@ -22,7 +26,7 @@ export default function Footer({ images }) {
         return (
           <div className="final-message">
             <div className="reaction happy">
-              <img src="assets/imagens/party.png" />
+              <img src={party} />
               Parabéns...
             </div>
             <span className="text-reaction">

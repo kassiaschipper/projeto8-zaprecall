@@ -3,6 +3,8 @@ import QuestionNumber from "./QuestionNumber";
 import Question from "./Question";
 import Answer from "./Answer";
 import Answered from "./Answered";
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
 
 
 export default function FlashCard ({index, question, answer, images, setImages}){
