@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FlashCard from "./Flashcard";
 
-export default function FlashCards() {
+export default function FlashCards(message) {
    
   
   const flashCardsDeck = [
@@ -52,7 +52,7 @@ export default function FlashCards() {
             
           </ul> 
        </div>
-       <Footer images={images}/>  
+       <Footer images={images} message={message}/>  
     </div>
   );
 }
