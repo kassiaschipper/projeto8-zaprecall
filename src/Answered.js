@@ -1,5 +1,5 @@
 export default function Answered({answerImg, index}){
-        const answerIcon = answerImg+ "-circle-outline"; //constante para mudar o icone dependendo da resposta
+        const answerIcon = answerImg+ "-circle"; //constante para mudar o icone dependendo da resposta
            
     return (
         <li>

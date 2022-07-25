@@ -52,7 +52,7 @@ export default function FlashCards() {
             
           </ul> 
        </div>
-       <Footer />  
+       <Footer images={images}/>  
     </div>
   );
 }
